@@ -29,6 +29,11 @@ img {
 
 .header-content {
   position: relative;
+  height: 100vh; /* Menyamakan tinggi dengan tinggi layar */
+  background-image: url("img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* Menghilangkan overflow jika ada margin atau padding tambahan */
 }
 
 .overlay {
@@ -39,6 +44,7 @@ img {
   height: 100%;
   background-color: rgba(61, 69, 159, 0.5);
   /* Ubah warna overlay sesuai kebutuhan Anda */
+  z-index: 1;
 }
 
 .content {
@@ -47,7 +53,22 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 2;
 }
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #0E2954;
+    /* Ubah warna latar belakang menu dropdown */
+  }
+
+  .navbar-nav {
+    margin-top: 30px;
+    /* Atur jarak antara header dan navigasi dropdown */
+  }
+}
+
+
 
 .content h1 {
   color: #fff;
@@ -249,6 +270,7 @@ p {
   text-align: center;
   padding: 80px 0;
 }
+
 .card-carousel {
   margin: 0 auto;
   max-width: 1000px;
@@ -258,6 +280,7 @@ p {
 .inner-carousel {
   top: 0;
 }
+
 /*Page about.html styles*/
 .section-about {
   padding: 80px 0;
